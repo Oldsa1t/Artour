@@ -1,0 +1,30 @@
+
+.social__list {
+    width: 100px;
+    @include undone-list;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social__db, .social__facebook,
+.social__twitter {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.social__facebook {    
+    background:url(../img/facbook.png) no-repeat;    
+    background-size: contain;
+}
+
+.social__twitter {
+    background:url(../img/twitter.png) no-repeat;
+    background-size: contain;
+}
+
+.social__db {
+    background:url(../img/db.png) no-repeat;
+    background-size: contain;
+}

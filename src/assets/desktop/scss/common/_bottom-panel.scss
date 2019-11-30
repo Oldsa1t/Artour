@@ -1,0 +1,43 @@
+@include lg-only {
+    .bottom-panel {
+        background: black;
+        color: white;        
+        box-sizing: border-box;
+    }
+
+    .bottom-panel__container {
+        width: calc(1920px - 405px - 405px);
+        height: 75px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .bottom-panel__list {
+        width: 310px;
+        @include undone-list;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bottom-panel__link {
+        text-decoration: none;
+        color: white;
+        font-family: "Poppins";
+        font-size: 14px;
+    }
+
+    .bottom-panel__wrapper {
+        width: 180px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .bottom-panel__social {
+        width: 100px;
+
+    }    
+    
+}

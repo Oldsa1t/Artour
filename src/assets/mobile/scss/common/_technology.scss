@@ -1,0 +1,55 @@
+@include sm {
+    .technology {
+        margin-top: 100px;
+        box-sizing: border-box;
+    }
+
+    .technology__wrapper {
+        width: 350px;
+        margin: 0 auto;
+    }
+
+    .technology__text {
+        font-size: 18px;
+        line-height: 34px;
+        margin-top: 35px;
+    }
+
+    .technology__illustration {
+        width: 360px;
+        height: 360px;
+        position: relative;
+        background: url(../img/lines.png) no-repeat;
+        background-position: center;
+        background-size: contain;
+        margin: 100px auto 0;
+
+        &::before {
+            content: "";
+            width: 380px;
+            height: 380px;
+            position: absolute;
+            background: url(../img/categories.png) no-repeat;
+            background-position: center;
+            background-size: contain;
+            top: -10px;
+            left: -20px;
+            z-index: 100;
+        }
+
+        &::after {
+            content: "";
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            background: url(../img/illustration.png) no-repeat;
+            background-position: center;
+            background-size: contain;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            z-index: 10;
+        }
+    }
+}

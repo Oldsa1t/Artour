@@ -1,0 +1,15 @@
+@include lg-only {
+    .footer {
+        margin-top: 40px;
+    }
+
+    .footer__section {
+        width: calc(1920px - 400px - 550px);
+        display: flex;
+        justify-content: space-between;
+        margin-left: 400px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        box-sizing: border-box;
+    }
+}

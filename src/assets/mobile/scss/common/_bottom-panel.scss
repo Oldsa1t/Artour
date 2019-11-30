@@ -1,0 +1,32 @@
+@include sm {
+    .bottom-panel {
+        background: black;
+        color: white;
+        margin-top: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+    }
+
+    .bottom-panel__list {
+        width: 310px;
+        @include undone-list;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .bottom-panel__link {
+        text-decoration: none;
+        color: white;
+        font-family: "Poppins";
+        font-size: 14px;
+    }
+
+    .bottom-panel__social {
+        width: 100px;
+        margin: 20px auto 0;
+
+    }    
+    
+}
