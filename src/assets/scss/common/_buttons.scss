@@ -1,0 +1,33 @@
+.login-btn {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    background: white;
+    border: 1px solid $cyan-border;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.08);
+    color: $cyan;
+    display: inline-block;
+}
+
+.join-btn {
+    width: 155px;
+    height: 57px;
+    line-height: 57px;
+    background: $cyan;
+    border: 1px solid #00c7c1;
+    border-radius: 30px;
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: "Poppins";
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.08);
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+
+}

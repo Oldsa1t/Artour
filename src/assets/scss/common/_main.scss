@@ -1,0 +1,43 @@
+@include sm {
+    .main__advantages {
+        padding-top: 75px;
+        box-sizing: border-box;
+        margin: 0 14px;
+    }
+
+    .main__about-us {
+        margin-top: 80px;        
+        padding-bottom: 20px;
+        padding-left: 34px;
+        padding-right: 34px;
+        box-sizing: border-box;
+    }
+
+    .main__technology {
+        margin-top: 90px;
+        box-sizing: border-box;
+    }
+
+    .main__member {
+        margin-top: 120px;
+    }
+}
+
+@include lg-only {
+    .main__advantages {
+        padding-top: 250px;
+        padding-bottom: 260px;
+        box-sizing: border-box;
+    }
+
+    .main__about-us {
+        padding-top: 270px;
+        padding-bottom: 70px;
+        box-sizing: border-box;
+    }
+
+    .main__technology {
+        width: 1200px;
+        margin: 320px auto 220px;
+    }
+}
