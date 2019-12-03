@@ -1,15 +1,63 @@
+.about-us {
+    background: $grey;        
+}
+
+.about-us__story, 
+.about-us__vision {
+    width: calc(460px + 560px + 100px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-us__text {
+    width: 460px;
+    font-size: 18px;
+    line-height: 34px;
+    margin-top: 20px;
+}
+
+.about-us__image-1 {
+    width: 620px;
+    height: 470px;
+    margin-right: -70px;
+}
+
+.about-us__vision {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 130px;
+}
+
+.about-us__image-2 {
+    width: 620px;
+    height: 470px;
+    margin-top: 10px;
+    margin-left: -70px;
+}
+
 @include sm {
     .about-us {
+        width: auto;
         background: $grey;
         display: flex;
         flex-direction: column;     
     }
     
     .about-us__story {
+        width: auto;
         margin-top: 70px;
+        display: block;
+    }
+
+    .about-us__vision {
+        width: auto;
+        display: block;
+        margin: 0;
     }
 
     .about-us__text {
+        width: 100%;
         font-size: 18px;
         line-height: 34px;
         margin-top: 20px;
@@ -19,46 +67,8 @@
     .about-us__image-2 {
         width: 100%;
         height: auto;
-        margin-top: 10px;
-    }    
-}
-
-@include lg-only {
-    .about-us {
-        background: $grey;        
-    }
-
-    .about-us__story, 
-    .about-us__vision {
-        width: calc(460px + 560px + 100px);
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .about-us__text {
-        width: 460px;
-        font-size: 18px;
-        line-height: 34px;
+        margin: 0;
         margin-top: 20px;
-    }
 
-    .about-us__image-1 {
-        width: 620px;
-        height: 470px;
-        margin-right: -70px;
-    }
-
-    .about-us__vision {
-        display: flex;
-        flex-direction: row-reverse;
-        margin-top: 130px;
-    }
-
-    .about-us__image-2 {
-        width: 620px;
-        height: 470px;
-        margin-top: 10px;
-        margin-left: -70px;
-    }
+    }    
 }

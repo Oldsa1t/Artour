@@ -5,6 +5,40 @@
     font-size: 14px;
 }
 
+.bottom-panel {
+    background: black;
+    color: #a6a6a6;        
+    box-sizing: border-box;
+}
+
+.bottom-panel__container {
+    width: auto;
+    max-width: calc(1920px - 405px - 405px);
+    height: 75px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom-panel__list {
+    width: 310px;
+    @include undone-list;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-panel__wrapper {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-panel__social {
+    width: 100px;
+}    
+
 @include sm {
     .bottom-panel {
         height: 116px;
@@ -14,6 +48,16 @@
         box-sizing: border-box;
     }
 
+    .bottom-panel__container {
+        width: auto;
+        display: block;
+    }
+
+    .bottom-panel__wrapper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .bottom-panel__list {
         max-width: 310px;
         @include undone-list;
@@ -21,49 +65,13 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-around;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
     }    
 
     .bottom-panel__social {
         width: 100px;
         margin: 20px auto 0;
-
-    }    
-    
-}
-
-@include lg-only {
-    .bottom-panel {
-        background: black;
-        color: #a6a6a6;        
-        box-sizing: border-box;
-    }
-
-    .bottom-panel__container {
-        width: calc(1920px - 405px - 405px);
-        height: 75px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .bottom-panel__list {
-        width: 310px;
-        @include undone-list;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .bottom-panel__wrapper {
-        width: 180px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .bottom-panel__social {
-        width: 100px;
     }    
     
 }

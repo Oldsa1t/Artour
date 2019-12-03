@@ -1,16 +1,149 @@
 .header {
     background: $yellow;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.header {
+    padding-bottom: 500px;
+    box-sizing: border-box;
+    position: relative;       
+
+    &::after {
+        content: "";
+        width: 270px;
+        height: 400px;
+        position: absolute;
+        background: url(../img/globus-pc.png) no-repeat;
+        background-size: contain;
+        top: 60px;
+        right: 0;
+        z-index: 4;
+    }
+}
+
+.header__container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 480px;
+        height: 470px;
+        position: absolute;
+        background: url(../img/plane-pc.png) no-repeat;
+        background-size: contain;
+        bottom: -630px;
+        left: -240px;
+        z-index: 10;
+    }    
+}
+
+.header__panel {
+    padding-top: 50px;
+    margin-left: 50px;
+    margin-right: 90px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__wrapper {
+    width: 560px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__hamburger {
+    display: none;
+}
+
+.header__link {
+    width: 93px;
+    height: 38px;
+    line-height: 38px;    
+    border-radius: 30px;    
+}
+
+.header__descript {
+    width: 500px;
+    margin: 245px auto 0;
+    box-sizing: border-box;        
+}
+
+.header__description {
+    width: 100%;
+    margin-left: -300px;
+    position: relative;    
+
+    &::before {
+        content: "";
+        width: 260px;
+        height: 470px;
+        position: absolute;
+        background: url(../img/iphone-pc.png) no-repeat;
+        background-size: contain;
+        bottom: -230px;
+        right: -240px;
+        z-index: 10;
+    }
+
+    &::after {
+        content: "";
+        width: 770px;
+        height: 660px;
+        position: absolute;
+        background: url(../img/macbook-pc.png) no-repeat;
+        background-size: contain;
+        bottom: -280px;
+        right: -800px;
+        z-index: 5;
+        
+    }
+}
+
+.header__title {
+    margin-bottom: 35px;
+}
+
+.header__text {
+    font-size: 18px;
+    line-height: 34px;
+}
+
+.header__join-btn {
+    margin-top: 80px;
 }
 
 @include sm {
+    .header {
+        overflow-x: hidden;
+        padding: 0;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .header__container {
+        width: auto;
+
+        &::before {
+            display: none;
+        }
+    }
+
     .header__panel {
+        width: auto;
         padding-top: 22px;
         margin: 0 15px;
         box-sizing: border-box;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        position: relative;
     }
 
     .header__logo {
@@ -19,6 +152,7 @@
     }
 
     .header__wrapper {
+        width: auto;
         margin-right: 50px;
         display: flex;
         align-items: center;
@@ -38,16 +172,47 @@
     }
 
     .header__hamburger {
+        width: 24px;
+        height: 24px;
+        display: block;
         background: none;
         border: none;
         padding: 0;
     }
 
+    .header__hamburger-item {
+        width: 24px;
+        height: 2px;
+        background: black;
+        margin: 5px 0;
+        transition: 0.5s;
+    }
+
+    .header__hamburger--active {
+        .header__hamburger-item{
+
+            &:first-child {
+                transform: rotate(45deg);
+                margin-bottom: -1px;
+            }
+
+            &:last-child {
+                transform: rotate(-45deg);
+                margin-top: -1px;
+            }
+
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+
     .header__descript {
+        width: auto;
         margin: 120px 40px 0;        
         padding-bottom: 360px;
         box-sizing: border-box;
-        position: relative;
+        position: relative;    
         
     }
 
@@ -64,7 +229,8 @@
             background: url(../img/macbook-mobile.png) no-repeat;
             background-size: contain;
             bottom: -340px;
-            left: -5px;            
+            left: -5px;   
+            z-index: 5;         
         }
 
         &::after {
@@ -76,6 +242,7 @@
             background-size: contain;
             bottom: -360px;
             left: -35px;
+            z-index: 10;
         }
     }
 
@@ -93,119 +260,4 @@
     }
 }
 
-@include lg-only {
-    .header {
-        padding-bottom: 500px;
-        box-sizing: border-box;
-        position: relative;       
-
-        &::after {
-            content: "";
-            width: 270px;
-            height: 400px;
-            position: absolute;
-            background: url(../img/globus-pc.png) no-repeat;
-            background-size: contain;
-            top: 60px;
-            right: 0;
-            z-index: 10;
-        }
-    }
-
-    .header__container {
-        width: 1200px;
-        margin: 0 auto;
-        position: relative;
-
-        &::before {
-            content: "";
-            width: 480px;
-            height: 470px;
-            position: absolute;
-            background: url(../img/plane-pc.png) no-repeat;
-            background-size: contain;
-            bottom: -630px;
-            left: -240px;
-            z-index: 10;
-        }
-
-        &::after {
-            content: "";
-            width: 770px;
-            height: 660px;
-            position: absolute;
-            background: url(../img/macbook-pc.png) no-repeat;
-            background-size: contain;
-            bottom: -280px;
-            right: -160px;
-            z-index: 5;
-            
-        }
-    }
-
-    .header__panel {
-        padding-top: 50px;
-        margin-left: 50px;
-        margin-right: 90px;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .header__wrapper {
-        width: 560px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .header__hamburger {
-        display: none;
-    }
-
-    .header__link {
-        width: 93px;
-        height: 38px;
-        line-height: 38px;    
-        border-radius: 30px;    
-    }
-
-    .header__descript {
-        width: 500px;
-        margin: 245px auto 0;
-        box-sizing: border-box;        
-    }
-
-    .header__description {
-        width: 100%;
-        margin-left: -300px;
-        position: relative;
-
-        &::after {
-            content: "";
-            width: 260px;
-            height: 470px;
-            position: absolute;
-            background: url(../img/iphone-pc.png) no-repeat;
-            background-size: contain;
-            bottom: -230px;
-            right: -240px;
-            z-index: 10;
-        }
-    }
-
-    .header__title {
-        margin-bottom: 35px;
-    }
-
-    .header__text {
-        font-size: 18px;
-        line-height: 34px;
-    }
-
-    .header__join-btn {
-        margin-top: 80px;
-    }
-}
 

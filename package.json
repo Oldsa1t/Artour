@@ -23,7 +23,8 @@
     "gulp-plumber": "^1.2.1",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^4.0.2",
-    "gulp-watch": "^5.0.1"
+    "gulp-watch": "^5.0.1",
+    "svg-morpheus": "^0.3.0"
   },
   "dependencies": {}
 }

@@ -1,29 +1,28 @@
+.language {
+    position: relative;  
+    cursor: pointer;      
+
+    &::before {
+        content: "";
+        width: 22px;
+        height: 13px;
+        position: absolute;
+        background: url(../img/flag.jpg) no-repeat;
+        background-size: contain;
+        left: -30px;
+        top: 3px;
+    }
+}
+
+.language__chosen {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 14px;        
+}
+
 @include sm {
     .language {
         display: none;
     }
 }
 
-@include lg-only {
-    .language {
-        position: relative;  
-        cursor: pointer;      
-
-        &::before {
-            content: "";
-            width: 22px;
-            height: 13px;
-            position: absolute;
-            background: url(../img/flag.jpg) no-repeat;
-            background-size: contain;
-            left: -30px;
-            top: 3px;
-        }
-    }
-
-    .language__chosen {
-        font-family: "Poppins";
-        font-weight: 500;
-        font-size: 14px;        
-    }
-}

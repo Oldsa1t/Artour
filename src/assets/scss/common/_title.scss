@@ -12,6 +12,26 @@
     font-weight: 800;
     font-family: "Poppins";
 }
+// ПК
+.title__h1 {
+    font-size: 60px;
+    line-height: 66px;        
+    font-weight: 500;
+    font-family: "Poppins";
+}
+
+.title__h2 {
+    font-size: 48px;
+}
+
+.title__h3 {
+    font-size: 22px;
+}
+
+.title__h4 {
+    font-size: 18px;
+    line-height: 39px;
+}
 
 @include sm {
     .title__h1 {
@@ -27,28 +47,6 @@
 
     .title__h3 {
         font-size: 22px;
-    }
-}
-
-@include lg-only {
-    .title__h1 {
-        font-size: 60px;
-        line-height: 66px;        
-        font-weight: 500;
-        font-family: "Poppins";
-    }
-
-    .title__h2 {
-        font-size: 48px;
-    }
-
-    .title__h3 {
-        font-size: 22px;
-    }
-
-    .title__h4 {
-        font-size: 18px;
-        line-height: 39px;
     }
 }
 

@@ -1,13 +1,11 @@
+.logo {
+    width: 200px;
+    height: 60px;
+}
+
 @include sm {
     .logo {
         width: 150px;
         height: 43px;
-    }
-}
-
-@include lg-only {
-    .logo {
-        width: 200px;
-        height: 60px;
     }
 }

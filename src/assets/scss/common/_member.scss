@@ -1,3 +1,61 @@
+.member {
+    background: $yellow;        
+    padding-top: 170px;        
+    padding-bottom: 170px;
+    box-sizing: border-box;
+}
+
+.member__wrapper {
+    width: 620px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.member__text {
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 25px;
+}
+
+.member__become {
+    width: 480px;
+    margin: 45px auto 0;
+    display: flex;
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.18);
+    border: 2px solid $cyan-border;
+}
+
+.member__input {
+    width: calc(480px - 155px);
+    height: 64px;
+    background: white;
+    font-size: 15px;
+    padding-left: 20px;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    color: $cyan;
+    font-family: "Poppins";
+    
+
+    &::placeholder {
+        color: $cyan;
+    }
+}
+
+.member__button {
+    width: 155px;
+    color: white;
+    font-family: "Poppins";
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: $cyan;
+    
+}
+
 @include sm {
     .member {
         background: $yellow;        
@@ -8,6 +66,10 @@
         box-sizing: border-box;
     }
 
+    .member__wrapper {
+        width: auto;
+    }
+
     .member__text {
         font-size: 18px;
         line-height: 30px;
@@ -15,6 +77,7 @@
     }
 
     .member__become {
+        width: auto;
         max-width: 380px;
         margin-top: 45px;
         display: flex;
@@ -50,65 +113,5 @@
         margin: 0;
         padding: 0;
         background: $cyan;
-    }
-}
-
-@include lg-only {
-    .member {
-        background: $yellow;        
-        padding-top: 170px;        
-        padding-bottom: 170px;
-        box-sizing: border-box;
-    }
-
-    .member__wrapper {
-        width: 620px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .member__text {
-        font-size: 18px;
-        line-height: 30px;
-        margin-top: 25px;
-    }
-
-    .member__become {
-        width: 480px;
-        margin: 45px auto 0;
-        display: flex;
-        box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.18);
-        border: 2px solid $cyan-border;
-    }
-
-    .member__input {
-        width: calc(480px - 155px);
-        height: 64px;
-        background: white;
-        font-size: 15px;
-        padding-left: 20px;
-        outline: none;
-        border: none;
-        box-sizing: border-box;
-        color: $cyan;
-        font-family: "Poppins";
-        
-
-        &::placeholder {
-            color: $cyan;
-        }
-    }
-
-    .member__button {
-        width: 155px;
-        color: white;
-        font-family: "Poppins";
-        font-size: 15px;
-        font-weight: 500;
-        border: none;
-        margin: 0;
-        padding: 0;
-        background: $cyan;
-        
     }
 }
