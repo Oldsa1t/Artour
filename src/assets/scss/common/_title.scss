@@ -33,6 +33,16 @@
     line-height: 39px;
 }
 
+@include md {
+    .title__h1 {
+        font-size: 54px;
+    }
+
+    .title__h2 {
+        font-size: 36px;
+    }
+}
+
 @include sm {
     .title__h1 {
         font-size: 37px;

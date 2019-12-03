@@ -4,7 +4,8 @@
 
 .about-us__story, 
 .about-us__vision {
-    width: calc(460px + 560px + 100px);
+    width: auto;
+    max-width: calc(460px + 560px + 100px);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -36,12 +37,40 @@
     margin-left: -70px;
 }
 
+@include md {
+    .about-us__story, 
+    .about-us__vision {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .about-us__text {
+        width: auto;
+        max-width: 500px;
+    }
+
+    .about-us__image-1, 
+    .about-us__image-2 {
+        width: 50%;
+        min-width: 500px;
+        height: auto;
+        margin: 0;
+        margin-top: 20px;
+    }
+}
+
 @include sm {
     .about-us {
         width: auto;
         background: $grey;
         display: flex;
-        flex-direction: column;     
+        flex-direction: column;   
     }
     
     .about-us__story {
@@ -66,6 +95,7 @@
     .about-us__image-1, 
     .about-us__image-2 {
         width: 100%;
+        min-width: auto;
         height: auto;
         margin: 0;
         margin-top: 20px;

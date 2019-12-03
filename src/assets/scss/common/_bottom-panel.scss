@@ -39,6 +39,14 @@
     width: 100px;
 }    
 
+@include md {
+    .bottom-panel {
+        padding-left: 50px;
+        padding-right: 50px;
+        box-sizing: border-box;
+    }    
+}
+
 @include sm {
     .bottom-panel {
         height: 116px;
@@ -59,6 +67,7 @@
     }
 
     .bottom-panel__list {
+        width: auto;
         max-width: 310px;
         @include undone-list;
         display: flex;

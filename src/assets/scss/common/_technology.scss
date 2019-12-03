@@ -1,5 +1,6 @@
 .technology {     
-    width: 1200px;  
+    width: auto;
+    max-width: 1200px;  
     padding-top: 50px; 
     padding-bottom: 650px;
     box-sizing: border-box;
@@ -51,6 +52,63 @@
         top: 150px;
         left: 130px;
         z-index: 10;
+    }
+}
+
+@include md {
+    .technology {     
+        width: auto; 
+        position: relative;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 0;
+    }
+    
+    .technology__wrapper {
+        width: 100%;
+        margin: 0 auto;
+
+    }
+
+    .technology__text {
+        max-width: 500px;
+    }
+    
+    .technology__illustration {
+        width: 100%;
+        height: calc(100vw - 40px);
+        position: relative;
+        background: url(../img/lines-pc.png) no-repeat;
+        background-position: center;
+        background-size: contain;
+        top: 0;
+        left: 0;
+    
+        &::before {
+            content: "";
+            width: 105%;
+            height: calc(100vw - 40px);
+            position: absolute;
+            background: url(../img/categories-pc.png) no-repeat;
+            background-position: center;
+            background-size: contain;
+            top: -10px;
+            left: -50px;
+            z-index: 100;
+        }
+    
+        &::after {
+            content: "";
+            width: 100%;
+            height: calc(100vw - 40px);
+            position: absolute;
+            background: url(../img/illustration-pc.png) no-repeat;
+            background-position: center;
+            background-size: contain;
+            top: 0px;
+            left: 0px;
+            z-index: 10;
+        }
     }
 }
 

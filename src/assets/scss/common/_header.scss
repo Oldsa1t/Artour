@@ -1,6 +1,5 @@
 .header {
     background: $yellow;
-    overflow-x: hidden;
 }
 
 .header {
@@ -117,6 +116,123 @@
     margin-top: 80px;
 }
 
+@include md {
+    .header {
+        
+        &::after {
+            display: none;
+        }
+    }
+
+    .header__container {
+        width: auto;
+        
+        &::before {
+            display: none;
+        }
+    }
+
+    .header__wrapper {
+        width: 200px;
+    }
+
+    .header__hamburger {
+        display: block;
+        width: 24px;
+        height: 20px;
+        background: none;
+        border: none;
+        padding: 0;
+        position: relative;
+    }
+
+    .header__hamburger-item {
+        width: 24px;
+        height: 2px;
+        background: black;
+        position: absolute;
+        transition: 0.5s;
+
+        &:first-child {
+            top: 0;
+        }
+
+        &:nth-child(2) {
+            top: 9px;
+        }
+
+        &:nth-child(3) {
+            top: 9px;
+        }
+
+        &:last-child {
+            bottom: 0;
+        }
+    }
+
+    .header__hamburger--active {
+        .header__hamburger-item{
+
+            &:first-child {
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            &:nth-child(2) {
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+
+            &:last-child {
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            
+        }
+    }    
+
+    
+
+    .header__descript {
+        width: auto;
+        margin-top: 100px;
+    }
+
+    .header__description {
+        max-width: 700px;
+        margin: 0 auto;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 350px * 1.7;
+            height: 270px * 1.7;
+            position: absolute;
+            background: url(../img/macbook-mobile.png) no-repeat;
+            background-size: contain;
+            bottom: -440px;
+            left: 150px;   
+            z-index: 5;         
+        }
+
+        &::after {
+            content: "";
+            width: 160px * 1.7;
+            height: 240px * 1.7;
+            position: absolute;
+            background: url(../img/iphone-mobile.png) no-repeat;
+            background-size: contain;
+            bottom: -460px;
+            left: 90px;
+            z-index: 10;
+        }
+    }
+}
+
 @include sm {
     .header {
         overflow-x: hidden;
@@ -173,39 +289,13 @@
 
     .header__hamburger {
         width: 24px;
-        height: 24px;
+        height: 20px;
         display: block;
         background: none;
         border: none;
         padding: 0;
-    }
-
-    .header__hamburger-item {
-        width: 24px;
-        height: 2px;
-        background: black;
-        margin: 5px 0;
-        transition: 0.5s;
-    }
-
-    .header__hamburger--active {
-        .header__hamburger-item{
-
-            &:first-child {
-                transform: rotate(45deg);
-                margin-bottom: -1px;
-            }
-
-            &:last-child {
-                transform: rotate(-45deg);
-                margin-top: -1px;
-            }
-
-            &:nth-child(2) {
-                display: none;
-            }
-        }
-    }
+        position: relative;
+    }    
 
     .header__descript {
         width: auto;

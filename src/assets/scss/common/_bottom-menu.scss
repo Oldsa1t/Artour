@@ -22,6 +22,10 @@
     line-height: 39px;     
 }
 
+@include md {
+    
+}
+
 @include sm {
     .bottom-menu {
         width: auto;
