@@ -77,16 +77,19 @@
         width: auto;
         margin-top: 70px;
         display: block;
+        padding: 0;
     }
 
     .about-us__vision {
         width: auto;
         display: block;
         margin: 0;
+        padding: 0;
     }
 
     .about-us__text {
-        width: 100%;
+        width: auto;
+        max-width: none;
         font-size: 18px;
         line-height: 34px;
         margin-top: 20px;
@@ -94,11 +97,19 @@
 
     .about-us__image-1, 
     .about-us__image-2 {
-        width: 100%;
+        width: auto;
         min-width: auto;
         height: auto;
         margin: 0;
         margin-top: 20px;
 
     }    
+
+    .about-us__image-1 {
+        margin-right: -34px;
+    }
+
+    .about-us__image-2 {
+        margin-left: -34px;
+    }
 }

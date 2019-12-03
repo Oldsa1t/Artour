@@ -2,6 +2,7 @@
     text-align: center;
     background: url(../img/bg-advantages-pc.png) no-repeat;
     background-size: cover;
+    background-position: center;
     
 }
 
@@ -69,6 +70,7 @@
 
     .advantages__item {
         width: auto;
+        flex-basis: calc(50% - 40px);
 
         &:nth-child(n+4) {
             margin-bottom: 45px;
@@ -76,8 +78,17 @@
     }
 
     .advantages__wrapper {
+        width: auto;
         padding: 0 20px 30px;
         box-sizing: border-box;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .advantages__item {
+        width: auto;
+        flex-basis: calc(33.33% - 40px);
     }
 }
 
@@ -88,6 +99,7 @@
     }
 
     .advantages__container {
+        padding: 0;
         width: auto;
     }
 
@@ -98,7 +110,8 @@
     .advantages__item {
         width: 100%;
         height: auto;
-        min-height: 444px;
+        flex-basis: 100%;
+        min-height: auto;
         box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.12);
         border-radius: 2px;
         text-align: center;
@@ -117,6 +130,9 @@
     }
 
     .advantages__wrapper {
+        width: auto;
+        margin-top: 50px;
+        margin-bottom: 30px;
         margin-left: 30px;
         margin-right: 30px;
         padding: 0;
@@ -127,12 +143,6 @@
         width: 70px;
         height: 70px;
         margin: 0 auto 30px;
-    }
-
-    .advantages__wrapper {
-        width: auto;
-        margin-top: 50px;
-        margin-bottom: 20px;
     }
 
     .advantages__text {
